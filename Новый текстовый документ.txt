@@ -1,0 +1,50 @@
+	var a_type = 2250,
+		lease = 0,
+		pass = false, 
+		from_mkad = 15,
+		l_time = 350,
+		box = 100,
+		bouble = 150,
+		strach = 90,
+		carton = 190,
+		scotch = 30,
+		total;
+	var a_type_s = $('#auto-type option:selected').val();
+	var val_pass = $('#pass option:selected').val();
+	$('.label__count').text(a_type + ' руб');
+	console.log(a_type_s);
+	console.log(val_pass);	
+	$('#auto-type').on("change", function(){
+		a_type_s = $(this).val();
+		if(a_type_s == 1){
+			a_type = 2250;
+			lease = 450;
+			console.log(lease);
+			$('.label__count').text(a_type + ' руб');
+		}
+		else{
+			a_type = 2500;
+			lease = 500;
+			console.log(lease);
+			$('.label__count').text(a_type + ' руб');
+		}
+	});
+
+	$('#pass').on("change", function(){
+		val_pass = $(this).val();
+		if(val_pass == true){
+			pass = 500;
+			console.log(val_pass);
+		}
+		else{
+			pass = 0;
+			console.log(val_pass);
+		}
+	});
+
+
+
+		 
+		
+		 
+		
